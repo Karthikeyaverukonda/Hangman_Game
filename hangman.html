@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="hangman.css">
+  <title>Hangman Game</title>
+</head>
+<body style="background-image:url('img2.jpg');">
+  <header>
+   <audio id="myTune" src="audio-1.mp3"></audio>
+</header>
+
+
+<h2 class="tit" >&#128525; Hangman Game &#128525;</h2>
+
+
+<div class="row">
+
+  <div class="column">
+    <div class="a1">
+<h2 class="p1" style="background-color:black ;color:white ;">Select a Category</h2>
+  <select id="list" >    
+  <option value="Football teams">Football teams</option>
+  <option value="Films">Films</option>
+  <option value="Cities">Cities</option>
+ 
+</select>
+<p class="p2">
+  The Choosen Category is <spam id="changed"></spam> .
+</p>
+    <button class="hs" >HighScore <span class="hs1">Highest points scored till now</span></button>
+<p id="highscore">20</p>
+    </div>
+  </div>
+
+  <div class="column">
+     <div class="a2">
+     <p id="catagoryName"></p>  
+      <div id="hold"></div>
+        <p id="mylives"><span class="m1">No of lifes left</span></p>
+        <p id="clue">Clue - <span class="c1">Hint</span></p>
+     </div> 
+  </div>
+
+
+  <div class="column">  
+  <div class="a3"> 
+    <button type="button" class="btn1"  onclick="aud_play_pause()">SOUND    <span class="t1">Play or Pause Music</span></button> 
+    <button class="btn2" onclick="window.location='hangman-1.html';">INSTRUCTIONS<span class="t2">How to play</span></button>
+    <button class="btn3" onclick="window.location='hangman.html';">NEW WORD   <span class="t3">Play with New Word</span></button>
+    <button class="btn3" onclick="window.location='https://www.google.com';">CLOSE <span class="t3">Close Game </span></button>
+    <p class="b1">YOUR POINTS: <span class="y1">Points you scored</span> <h1 id ="ys" style="background-color: black;">0</h1></p>
+
+    </div>
+  </div>
+
+</div>
+<br/>
+<br/>
+    <div id="buttons"></div>  
+
+     <canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+
+    <div class="container">
+      <button id="hint">Hint<span class="t4">Get Hint </span></button>
+      <button id="reset">Play again<span class="t5">New Game</span></button>
+    </div>
+
+    <button class="ans" > Answer</button>
+    <h2 id="an">Answer</h2>
+
+
+<script src="hangman.js"></script>
+
+<script type="text/javascript">
+    var changedText = document.getElementById('changed');
+function listQ(){
+    changedText.textContent = this.value;
+}
+document.getElementById("list").onchange = listQ;
+</script>
+
+<script type="text/javascript">
+function aud_play_pause() {
+  var myAudio = document.getElementById("myTune");
+  if (myAudio.paused) {
+    myAudio.play();
+  } else {
+    myAudio.pause();
+  }
+}
+</script>
+
+
+</body>
+</html>
+
+

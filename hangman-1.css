@@ -1,0 +1,44 @@
+h2
+{
+	color: black;
+}
+
+.bd
+{
+	background-image:url('img3.jpg');
+height: 100%;
+width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn1
+{
+height: 40px;
+width: 100px;
+font-family:"Arial";
+font-weight: bold;
+font-size: 100%;
+color: white;
+background: steelblue;
+transition:all 500ms ease;
+}
+
+.btn1 .t1 {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.btn1:hover .t1 {
+  visibility: visible;
+}
