@@ -1,3 +1,3 @@
 # Hangman_Game
-Game Deploying link :
+Game Deploying link : https://karthikeyaverukonda.github.io/Hangman_Game/
  
